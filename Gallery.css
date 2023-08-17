@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+body{
+    background: linear-gradient(#000f27 , rgba(0, 34, 34, 0.88));
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.heading{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+.container .main-video{
+    border-radius: 5px;
+    padding: 10px;
+}
+.container .main-video video{
+    width: 100%;
+    border-radius: 5px;
+}
+.container .main-video h3{
+    color: #fff;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.container .video-list{
+    background: rgba(0,0,0, 0.1);
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+}
+.container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.container .video-list::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 50px;
+}
+.container .video-list::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#fff);
+    border-radius: 50px;
+}
+.container .video-list::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#0ef);
+    border-radius: 50px;
+}
+.container .video-list .vid video{
+    width: 100px;
+    border-radius: 5px;
+}
+.container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.container .video-list .vid:hover{
+    background: rgba(0, 0, 0,0.5);
+}
+.container .video-list .vid.active{
+    background: rgba(0, 238, 255,0.1);
+}
+.video-list h3{
+    color: #fff;
+}
+
+@media (max-width: 991px){
+    .container{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
