@@ -1,0 +1,129 @@
+*{
+    font-family: sans-serif;
+    
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#000f27 , rgba(0, 34, 34, 0.88));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header h1{
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fields a{
+    width: 90%;
+    margin-bottom: 10%;
+}
+.fields a img{
+    width: 100%;
+    border-radius: 20px;
+}
+.fields h2{
+    color: #fff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5% 0;
+    margin-bottom: 10%;
+}
+.question{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.question label{
+    font-weight: 600;
+    color: #0ef;
+}
+form label{
+    color: #fff;
+}
+
+form .input-check{
+    display: flex;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: solid #fff;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+
+
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.submit input{
+    margin: 0 10%;
+    padding: 5px 10px;
+    border: solid #0ef;
+    border-radius: 15px;
+    background: transparent;
+    font-size: 1rem;
+    color: #0ef;
+    cursor: pointer;
+}
+
+.input-check:hover{
+    border: solid #0ef;
+}
+
+.input-check label:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: transparent;
+}
+label input[type="checkbox"]:checked ~ .input-check{
+    background: #0ef;
+}
+
+
+::-webkit-scrollbar{
+    width: 12px;
+    background: linear-gradient(#000f27 , rgba(0, 34, 34, 0.88));
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#fff);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#0ef);
+}
