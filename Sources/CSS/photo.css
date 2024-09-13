@@ -1,0 +1,114 @@
+*{
+    font-family: sans-serif;
+    
+}
+h1{
+    color: #fff;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#000f27 , rgba(0, 34, 34, 0.88));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.slide-show{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin: 0.4rem;
+}
+.slide-show::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    scroll-snap-align: start;
+    border-radius: 30px;
+    height: 30vh;
+    width: 88vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    margin-bottom:30% ;
+    margin-top: 40%;
+}
+@keyframes animate{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.topics{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+h2{
+    color: #fff;
+}
+
+@media (min-width: 930px){
+    .card{
+        width:90vw
+    }
+}

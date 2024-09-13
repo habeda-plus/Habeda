@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .channel{
+    width: 80%;
+    height: 70px;
+    display: flex;
+    background-color: red;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
